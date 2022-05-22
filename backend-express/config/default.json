@@ -1,0 +1,5 @@
+{
+    "port": 5000,
+    "mongoUri": "mongodb+srv://SxS:s123456789@cluster0.qgn0k.mongodb.net/ExtrumsTest?retryWrites=true&w=majority",
+    "urlSiteForCors": "http://localhost:8080"
+}
