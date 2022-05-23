@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-md">
+  <div style="padding: 0 40px;">
   <vue-horizontal-list
       v-if="getMyListCount > 0"
       :items="getMyList"
@@ -14,6 +14,7 @@
   </vue-horizontal-list>
   <div v-else class="alert-warning">У вас нет идей в списке!</div>
   </div>
+
 </template>
 
 <script>
@@ -92,8 +93,5 @@ export default {
 </script>
 
 <style scoped>
-.q-pa-md {
-  width: 100%;
-  padding: 0 39px!important;
-}
+
 </style>

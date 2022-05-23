@@ -1,5 +1,10 @@
 <template>
-  <LoaderPage v-if="loading" />
+  <q-spinner
+      v-if="loading"
+      color="primary"
+      size="3em"
+      :thickness="10"
+  />
 <div class="q-pa-md row items-start q-gutter-md"
      v-for="(idea, index) of getFreshIdeas"
      :key="index">
@@ -9,7 +14,6 @@
 </template>
 
 <script>
-import LoaderPage from '@/components/Loader'
 import store from '@/store'
 import CardList from "@/components/CardList";
 import { useQuasar  } from 'quasar'
@@ -75,7 +79,6 @@ name: "FreshIdeasList",
     }
   },
   components: {
-    LoaderPage,
     CardList
   }
 }
