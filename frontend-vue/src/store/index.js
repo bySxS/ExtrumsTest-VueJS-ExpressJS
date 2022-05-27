@@ -64,9 +64,9 @@ export default createStore({
                 }),
                 headers: {
                     "Content-type": "application/json; charset=UTF-8"
-                }
-            }).then(response => response.json()
-             ).then(data => {
+                }})
+                .then(response => response.json())
+                .then(data => {
                 if ((data.nameList) && (PayLoad.toFrom === 'From')) {
 
                     if (PayLoad.nameList === 'FinishedIdeas'){
@@ -85,8 +85,8 @@ export default createStore({
                 } else {
                     if (data.message)
                         success = data.message
-                }
-            }).catch(function(err){
+                }})
+                .catch(function(err){
                 return new Promise((resolve, reject) => reject(String(err)))
             });
             return new Promise((resolve) => resolve(success))
